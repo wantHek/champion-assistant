@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fteam.champion</groupId>
+    <artifactId>champion-assistant</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>champion-utils</module>
+        <module>champion-datesource</module>
+        <module>champion-service</module>
+        <module>champion-webapp</module>
+        <module>champion-interface</module>
+        <module>champion-pagemodel</module>
+    </modules>
+    <!-- 初始化框架的版本号 -->
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <spring-version>4.3.9.RELEASE</spring-version>
+        <spring-data-mongodb>1.10.4.RELEASE</spring-data-mongodb>
+        <mongo-java-driver>3.4.1</mongo-java-driver>
+    </properties>
+
+    <!--<dependencies>-->
+        <!--&lt;!&ndash; mongodb开始 &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.mongodb</groupId>-->
+            <!--<artifactId>mongo-java-driver</artifactId>-->
+            <!--<version>${mongo-java-driver}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-mongodb</artifactId>-->
+            <!--<version>${spring-data-mongodb}</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; mongodb结束 &ndash;&gt;-->
+        <!--&lt;!&ndash; 引入Spring(包含SpringMVC) 依赖 start &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-core</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-web</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-oxm</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-tx</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-jdbc</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-webmvc</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-aop</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-context-support</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-test</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; 引入Spring 依赖 end &ndash;&gt;-->
+
+    <!--</dependencies>-->
+
+</project>

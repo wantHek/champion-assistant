@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/champion-assistant.iml" filepath="$PROJECT_DIR$/champion-assistant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-datesource/champion-datesource.iml" filepath="$PROJECT_DIR$/champion-datesource/champion-datesource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-interface/champion-interface.iml" filepath="$PROJECT_DIR$/champion-interface/champion-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-pagemodel/champion-pagemodel.iml" filepath="$PROJECT_DIR$/champion-pagemodel/champion-pagemodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-service/champion-service.iml" filepath="$PROJECT_DIR$/champion-service/champion-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-utils/champion-utils.iml" filepath="$PROJECT_DIR$/champion-utils/champion-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-webapp/champion-webapp.iml" filepath="$PROJECT_DIR$/champion-webapp/champion-webapp.iml" />
+    </modules>
+  </component>
+</project>
