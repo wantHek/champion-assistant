@@ -7,8 +7,7 @@
           http://www.springframework.org/schema/mvc
           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <import resource="spring-properties.xml" />
-    <import resource="spring-commons.xml" />
-    <import resource="spring-mongo.xml" />
+    <!--注解标签驱动  -->
+    <mvc:annotation-driven/>
 
 </beans>
