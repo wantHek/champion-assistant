@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="champion-service:war">
     <output-path>$PROJECT_DIR$/champion-service/target</output-path>
-    <root id="archive" name="champion-webapp.war">
+    <root id="archive" name="champion.war">
       <element id="artifact" artifact-name="champion-service:war exploded" />
     </root>
   </artifact>

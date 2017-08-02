@@ -1,15 +1,20 @@
 package com.champion.service.dao;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by yongjie.pei on 2017/7/31.
  */
+@Repository
 public class UserDao {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private MongoTemplate mongoTemplate;
@@ -21,6 +26,7 @@ public class UserDao {
      */
     public void insert(String userJson) {
         mongoTemplate.insert(userJson);
+        logger.info("成功");
     }
 
 //    /**

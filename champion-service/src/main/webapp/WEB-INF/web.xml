@@ -1,6 +1,6 @@
  <web-app>
 
-     <display-name>Archetype Created Web Application</display-name>
+     <display-name>champion service</display-name>
 
      <!-- 配置DispatchcerServlet -->
      <servlet>
