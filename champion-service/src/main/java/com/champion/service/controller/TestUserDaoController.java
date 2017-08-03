@@ -1,6 +1,6 @@
 package com.champion.service.controller;
 
-import com.champion.service.dao.UserDao;
+import com.champion.service.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,14 @@ public class TestUserDaoController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     @RequestMapping(value="/user",method={RequestMethod.POST})
     @ResponseBody
     public String getScreenResout(@RequestBody String userJson){
         String resultMsg = "";
         try {
-            userDao.insert(userJson);
+            userService.insert(userJson);
             resultMsg = "1";
             logger.info("成功");
         } catch (Exception e) {

@@ -15,6 +15,13 @@
 
     <dependencies>
 
+        <!-- zookeeper -->
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.10</version>
+        </dependency>
+
         <!-- logback+slf4j start -->
         <!-- https://mvnrevpository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
@@ -35,20 +42,6 @@
             <version>1.2.3</version>
         </dependency>
         <!-- logback+slf4j end -->
-
-        <!-- mybatis start -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis-spring-version}</version>
-        </dependency>
-        <!--mybatis end -->
 
         <!-- https://mvnrepository.com/artifact/com.uogome/dubbo2 -->
         <dependency>

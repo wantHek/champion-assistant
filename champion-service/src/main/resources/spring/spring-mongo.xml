@@ -27,8 +27,4 @@
         <constructor-arg name="databaseName" value="${datasource.dbname}" />
     </bean>
 
-    <!-- spring与mybatis整合配置，扫描所有dao -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
-          p:basePackage="com.champion.service.dao"  />
-
 </beans>

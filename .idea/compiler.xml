@@ -15,13 +15,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="champion-assistant" target="1.5" />
-      <module name="champion-datesource" target="1.5" />
-      <module name="champion-interface" target="1.5" />
-      <module name="champion-pagemodel" target="1.5" />
-      <module name="champion-service" target="1.5" />
-      <module name="champion-utils" target="1.5" />
-      <module name="champion-webapp" target="1.5" />
+      <module name="champion-assistant" target="1.8" />
+      <module name="champion-datesource" target="1.8" />
+      <module name="champion-interface" target="1.8" />
+      <module name="champion-pagemodel" target="1.8" />
+      <module name="champion-service" target="1.8" />
+      <module name="champion-utils" target="1.8" />
+      <module name="champion-webapp" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

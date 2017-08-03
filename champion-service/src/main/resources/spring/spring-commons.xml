@@ -3,14 +3,27 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/mvc
           http://www.springframework.org/schema/mvc/spring-mvc.xsd
           http://www.springframework.org/schema/context
-          http://www.springframework.org/schema/context/spring-context.xsd">
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://code.alibabatech.com/schema/dubbo
+          http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!--注解标签驱动  -->
     <mvc:annotation-driven/>
+
+    <!-- 配置自动扫描的包 -->
+    <context:component-scan base-package="com.champion.service.sqlmanager"/>
+
+    <dubbo:application name="retry-server" />
+    <!-- dubbo配置自动扫描的包 -->
+    <dubbo:annotation package="com.champion.service.service"/>
+    <dubbo:registry id="registry" protocol="zookeeper" address="localhost:2181" client="zkclient" />
+    <!-- expose this service through dubbo protocol, through port 20880 -->
+    <dubbo:protocol id="protocol" name="dubbo" port="20881" />
 
 </beans>
