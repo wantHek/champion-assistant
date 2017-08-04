@@ -1,5 +1,6 @@
 package com.champion.service.sqlmanager;
 
+import com.mongodb.util.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,8 @@ public class UserSqlManger {
      * @param userJson
      */
     public void insert(String userJson) {
-        mongoTemplate.insert(userJson);
+        Object parse = JSON.parse(userJson);
+        mongoTemplate.insert(parse);
         logger.info("成功");
     }
 }

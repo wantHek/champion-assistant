@@ -9,22 +9,26 @@
           http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <!-- Default bean name is 'mongo' -->
-    <!-- 连接池配置详细查看http://api.mongodb.org/java/2.7.2/com/mongodb/MongoOptions.html#connectionsPerHost
-        或者http://www.cnblogs.com/huangfox/archive/2012/04/01/2428947.html
-    -->
-    <mongo:mongo host="${datasource.host}" port="${datasource.port}">
-        <!--<mongo:options connections-per-host="10"-->
-        <!--threads-allowed-to-block-for-connection-multiplier="10"-->
-        <!--auto-connect-retry="true" />-->
-    </mongo:mongo>
+    <!-- write concern(write-number):: NONE: -1, NORMAL: 0, SAFE: 1 (default),  FSYNC_SAFE: 2, REPLICAS_SAFE: 3, JOURNAL_SAFE: 4, MAJORITY: 5 -->
+    <mongo:mongo-client id="mongo-client" host="${mongo.host}" port="${mongo.port}"
+                        credentials="${mongo.username}:${mongo.passwd}@${mongo.dbname}">
+        <mongo:client-options
+                connections-per-host="${mongo.connectionsPerHost}"
+                threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
+                connect-timeout="${mongo.connectTimeout}"
+                max-wait-time="${mongo.maxWaitTime}"
+                socket-timeout="${mongo.socketTimeout}"/>
 
+    </mongo:mongo-client>
+
+    <!-- 设置使用的数据库 名-->
+    <mongo:db-factory dbname="${mongo.dbname}" mongo-ref="mongo-client"/>
 
     <!-- Spring提供的mongodb操作模板-->
     <bean id="mongoTemplate"
           class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg ref="mongo" />
-        <constructor-arg name="databaseName" value="${datasource.dbname}" />
+        <!--<constructor-arg ref="mongo-client" />-->
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
     </bean>
 
 </beans>
