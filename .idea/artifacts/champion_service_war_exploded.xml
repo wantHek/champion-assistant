@@ -7,6 +7,15 @@
           <element id="module-output" name="champion-service" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.0" />
+          <element id="archive" name="champion-interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="champion-interface" />
+          </element>
+          <element id="archive" name="champion-utils-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="champion-utils" />
+          </element>
           <element id="library" level="project" name="Maven: com.101tec:zkclient:0.10" />
           <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.8" />
           <element id="library" level="project" name="Maven: jline:jline:0.9.94" />

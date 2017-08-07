@@ -22,7 +22,7 @@
     <dubbo:application name="retry-server" />
     <!-- dubbo配置自动扫描的包 -->
     <dubbo:annotation package="com.champion.service.service"/>
-    <dubbo:registry id="registry" protocol="zookeeper" address="localhost:2181" client="zkclient" />
+    <dubbo:registry id="registry" protocol="zookeeper" address="10.135.132.34:2181" client="zkclient" />
     <!-- expose this service through dubbo protocol, through port 20880 -->
     <dubbo:protocol id="protocol" name="dubbo" port="20881" />
 
