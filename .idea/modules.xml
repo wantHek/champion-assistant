@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/champion-interface/champion-interface.iml" filepath="$PROJECT_DIR$/champion-interface/champion-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/champion-pagemodel/champion-pagemodel.iml" filepath="$PROJECT_DIR$/champion-pagemodel/champion-pagemodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/champion-service/champion-service.iml" filepath="$PROJECT_DIR$/champion-service/champion-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/champion-static-web/champion-static-web.iml" filepath="$PROJECT_DIR$/champion-static-web/champion-static-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/champion-utils/champion-utils.iml" filepath="$PROJECT_DIR$/champion-utils/champion-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/champion-webapp/champion-webapp.iml" filepath="$PROJECT_DIR$/champion-webapp/champion-webapp.iml" />
     </modules>
