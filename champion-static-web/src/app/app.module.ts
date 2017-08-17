@@ -5,17 +5,22 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './route/appRoutes.component';
 import { AppComponent }          from './app.component';
 import { LoginComponent }   from './login/login.component';
+import { WelcomeComponent }   from './welcome/welcome.component';
 import { PageNotFoundComponent } from './not-found.component';
+import { HttpModule,JsonpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule,
+    JsonpModule
   ],
   declarations: [
     AppComponent,
     LoginComponent,
+    WelcomeComponent,
     PageNotFoundComponent
   ],
   bootstrap: [ AppComponent ]

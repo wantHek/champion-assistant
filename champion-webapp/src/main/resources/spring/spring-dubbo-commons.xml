@@ -13,10 +13,13 @@
           http://code.alibabatech.com/schema/dubbo
           http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!--注解标签驱动  -->
-    <mvc:annotation-driven/>
+    <dubbo:application name="retry-consumer" />
+    <!-- dubbo配置自动扫描的包 -->
+    <dubbo:annotation package="com.champion.web.service"/>
 
-    <!-- 配置自动扫描的包 -->
-    <context:component-scan base-package="com.champion.service.sqlmanager"/>
+    <dubbo:registry id="registry" protocol="zookeeper" address="10.135.132.34:2181" client="zkclient" />
+    
+    <!-- expose this service through dubbo protocol, through port 20880 -->
+    <dubbo:protocol id="protocol" name="dubbo" port="20882" />
 
 </beans>
