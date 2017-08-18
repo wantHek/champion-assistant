@@ -2,21 +2,21 @@ import { Component } from '@angular/core';
 import { Http,Headers,RequestOptions } from '@angular/http';
 import { Router } from '@angular/router';
 
-import { tomcatLoginUrl } from "../route/appRoutesUrl";
+import { tomcatLoginUrl,loginImagesUrl } from "../route/appRoutesUrl";
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['css/reset.css','css/style.css']
+  styleUrls: ['css/style.css']
 })
 
 export class LoginComponent {
-
+  loginImagesUrl:String = loginImagesUrl;
   loginUser:LoginUser = new LoginUser;
+
   constructor(private http:Http,private router:Router){}
 
-  submitLogin(isVailed:boolean){
-    if(isVailed){
+  submitLogin(){
       let headers = new Headers({ 'Content-Type': 'application/json' });
 
       let options = new RequestOptions({ headers: headers });
@@ -26,7 +26,6 @@ export class LoginComponent {
           this.router.navigate(['welcome'],{ queryParams: { userName: body.userName } });
         }
       })
-    }
   }
 }
 export class LoginUser{

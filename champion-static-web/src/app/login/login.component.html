@@ -1,24 +1,30 @@
-<div class="page-container">
-  <h1 align="center">Login</h1>
-  <form #loginForm="ngForm" (ngSubmit)="submitLogin(loginForm.form.valid)">
-    <input type="text" name="username" #username="ngModel" [(ngModel)] = "loginUser.userName" required  class="username" placeholder="Username">
-    <!--<p *ngIf="!username.pristine&&username.invalid||username.touched&&username.invalid">用户名由英文字母和数字组成的6-16位字符,以字母开头</p>-->
-<!--pattern="^[a-zA-Z][a-zA-Z0-9]*"   minlength="6"  -->
-    <input type="password" name="password" class="password" #userpwd="ngModel" [(ngModel)] = "loginUser.passWord"  required  placeholder="Password">
-    <button type="submit">Login</button>
-    <br/>
-    <nav>
-    <a routerLink="/regist" routerLinkActive="active">regist</a>
-    </nav>
-    <div class="error"><span>+</span></div>
-  </form>
-  <div align="center" class="connect">
-    <p>Or connect with:</p>
-    <p>
-      <a class="facebook" href=""></a>
-      <a class="twitter" href=""></a>
-    </p>
+<body>
+<h1> Login </h1>
+<div class="login-form">
+  <div class="close"> </div>
+  <div class="head-info">
+    <label class="lbl-1"> </label>
+    <label class="lbl-2"> </label>
+    <label class="lbl-3"> </label>
   </div>
+  <div class="clear"> </div>
+  <div class="avtar">
+    <img src="{{loginImagesUrl}}/avtar.png" />
+  </div>
+  <form #loginForm="ngForm" (ngSubmit)="submitLogin()">
+    <div class="copy-rights">
+      <p *ngIf="(!username.pristine&&username.invalid||username.touched&&username.invalid)||!userpwd.pristine&&username.invalid&&username.touched&&username.invalid">请填写用户名</p>
+      <p *ngIf="(!userpwd.pristine&&userpwd.invalid||userpwd.touched&&userpwd.invalid)||!username.pristine&&userpwd.invalid&&userpwd.touched&&userpwd.invalid">请填写密码</p>
+      <!--<p *ngIf="loginForm.form.dirty&&loginForm.form.pristine">请填写用户名，密码</p>-->
+    </div>
+    <input type="text" name="username" #username="ngModel" [(ngModel)] = "loginUser.userName" required  class="text" placeholder="Username">
+    <input type="password" name="password" #userpwd="ngModel" [(ngModel)] = "loginUser.passWord"  required  placeholder="Password">
+    <div class="signin" >
+      <button type="submit"  >Login</button>
+    </div>
+  </form>
 </div>
-
-<!--<div align="center">Collect from <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">状元小帮手</a></div>-->
+<div class="copy-rights">
+  <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.mycodes.net/" target="_blank" title="源码之家">源码之家</a></p>
+</div>
+</body>
